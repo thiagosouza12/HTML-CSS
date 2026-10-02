@@ -13,3 +13,168 @@ Este repositório contém exercícios e desafios práticos desenvolvidos durante
 - CSS3
 
 # Prova Simulada/estudo feita em sala de aula e em casa.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Layout - Wireframe</title>
+
+    <!-- 1. CSS EXTERNO -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- 2. CSS INTERNO (Regras específicas do cabeçalho do documento) -->
+    <style>
+        #banner {
+            height: 180px;
+            border: 2px solid #000;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 25px;
+            /* --- PROPRIEDADES PARA A IMAGEM DE FUNDO - usar na prova é opcional --- */
+            background-image: url(img/fundo.jpg);
+            background-size: cover;       /* Preenche todo o banner sem distorcer */
+            background-position: center;  /* Centraliza a imagem no meio do bloco */
+            background-repeat: no-repeat; /* Impede que a imagem fique se repetindo em mosaico */
+        }
+
+        #area-texto {
+            height: 110px;
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container Principal -->
+    <div id="container">
+
+        <!-- CABEÇALHO -->
+        <header>
+            <!-- 3. CSS INLINE (Aplicado diretamente na tag com o atributo style) -->
+            <h1 style="font-size: 1.8rem; text-transform: uppercase;">Título Principal</h1>
+            <p style="color: #333; margin-top: 4px;">Parágrafo que acompanha o título</p>
+        </header>
+
+        <!-- NAVEGAÇÃO -->
+        <nav>
+            <ul>
+                <li><a href="">item 1</a></li>
+                <li><a href="">item 1</a></li>
+                <li><a href="">item 1</a></li>
+                <li><a href="">item 1</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
+            <!-- Banner (Estilizado via CSS Interno) -->
+            <div id="banner">
+                Banner
+            </div>
+
+            <!-- 3 Colunas com Imagem -->
+            <section class="cards-container">
+                <article class="card">
+                    <h3>Título</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deserunt excepturi magnam. Delectus ea, tempora beatae quasi nostrum non, sunt hic voluptatum deserunt aliquam, laborum necessitatibus sequi harum minima et.</p>
+                    <img src="img/logo.jpg" alt="imagem">
+                </article>
+
+                <article class="card">
+                    <h3>Título</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deserunt excepturi magnam. Delectus ea, tempora beatae quasi nostrum non, sunt hic voluptatum deserunt aliquam, laborum necessitatibus sequi harum minima et.</p>
+                    <img src="img/logo.jpg" alt="imagem">
+                </article>
+
+                <article class="card">
+                    <h3>Título</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deserunt excepturi magnam. Delectus ea, tempora beatae quasi nostrum non, sunt hic voluptatum deserunt aliquam, laborum necessitatibus sequi harum minima et.</p>
+                    <img src="img/logo.jpg" alt="imagem">
+                </article>
+            </section>
+
+            <!-- Tabela Semântica 5x5 -->
+            <aside>
+                <table>
+                    <caption style="font-weight: bold; margin-bottom: 5px;">Tabela 6X5</caption>
+                    <thead>
+                        <tr>
+                            <th>Col 1</th>
+                            <th>Col 2</th>
+                            <th>Col 3</th>
+                            <th>Col 4</th>
+                            <th>Col 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dado 1</td>
+                            <td>Dado 2</td>
+                            <td>Dado 3</td>
+                            <td>Dado 4</td>
+                            <td>Dado 5</td>
+                        </tr>
+                        <tr>
+                            <td>Dado 1</td>
+                            <td>Dado 2</td>
+                            <td>Dado 3</td>
+                            <td>Dado 4</td>
+                            <td>Dado 5</td>
+                        </tr>
+                        <tr>
+                            <td>Dado 1</td>
+                            <td>Dado 2</td>
+                            <td>Dado 3</td>
+                            <td>Dado 4</td>
+                            <td>Dado 5</td>
+                        </tr>
+                        <tr>
+                            <td>Dado 1</td>
+                            <td>Dado 2</td>
+                            <td>Dado 3</td>
+                            <td>Dado 4</td>
+                            <td>Dado 5</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">final da tabela</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </aside>
+
+            <!-- Galeria de Imagens 4x4 -->
+            <div class="galeria-bloco">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+            </div>
+
+            <div class="galeria-bloco">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+                <img src="img/logo.jpg" alt="imagem">
+            </div>
+
+            <!-- Área de Texto (Estilizada via CSS Interno) -->
+            <div id="area-texto">
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deserunt excepturi magnam. Delectus ea, tempora beatae quasi nostrum non, sunt hic voluptatum deserunt aliquam, laborum necessitatibus sequi harum minima et.</p>
+            </div>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <p>parágrafo simples</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
